@@ -63,7 +63,7 @@ app.get('/list-bucket-content/:path(*)?', (req, res) => __awaiter(void 0, void 0
         });
     }
 }));
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
