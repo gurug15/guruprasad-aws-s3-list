@@ -41,7 +41,7 @@ resource "aws_instance" "application" {
 #!/bin/bash
 sudo apt update -y
 sudo apt install -y nodejs npm git
-export S3_BUCKET_NAME=guru-tetris-v1-backend
+export S3_BUCKET_NAME=${var.s3_bkt_name}
 cd /home/ubuntu
 mkdir application
 cd application
