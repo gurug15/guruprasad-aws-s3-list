@@ -45,12 +45,17 @@ app.get('/list-bucket-content/:path(*)?', async (req: Request, res: Response) =>
 
         // Combine folders and files, filter out empty names
         const content = [...folders, ...files].filter(item => item.name !== '');
-
+        if (content.length == 0) {
+            res.status(400).json({
+                message: "No such directory named", prefix
+            })
+        }
         res.json({ content });
     } catch (error) {
         console.error('Error:', error);
         res.status(500).json({ 
-            error: 'No Object named that path or Failed to list bucket contents'
+            error: 'Failed to list bucket contents',
+            details: error instanceof Error ? error.message :"Might not have permission"
         });
     }
 });
