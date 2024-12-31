@@ -4,11 +4,12 @@ app/node_modules
 
 
 **/.terraform/*
+**/.terraform.lock.hcl
+terraform-code/.terraform.lock.hcl
 
 # .tfstate files
 *.tfstate
 *.tfstate.*
-*.terraform.*
 # Crash log files
 crash.log
 crash.*.log
