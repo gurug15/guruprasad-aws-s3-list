@@ -8,7 +8,7 @@ app/node_modules
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
+*.terraform.*
 # Crash log files
 crash.log
 crash.*.log
