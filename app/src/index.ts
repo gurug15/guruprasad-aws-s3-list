@@ -47,7 +47,7 @@ app.get('/list-bucket-content/:path(*)?', async (req: Request, res: Response) =>
         const content = [...folders, ...files].filter(item => item.name !== '');
         if (content.length == 0) {
             res.status(400).json({
-                message: "No such directory named", prefix
+                message: "Empty Directory/folder or No such Directory/folder", prefix
             })
         }
         res.json({ content });
