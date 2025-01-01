@@ -45,7 +45,7 @@ resource "aws_lb" "application_lb" {
 # Target Group for the ALB
 resource "aws_lb_target_group" "app_target_group" {
   name        = "app-tg"
-  port        = 3000                   # Target port in the EC2 instance
+  port        = 3000 # Target port in the EC2 instance
   protocol    = "HTTP"
   vpc_id      = data.aws_vpc.default.id
   target_type = "instance"
@@ -64,13 +64,13 @@ resource "aws_lb_target_group" "app_target_group" {
 resource "aws_lb_target_group_attachment" "tg_attachment" {
   target_group_arn = aws_lb_target_group.app_target_group.arn
   target_id        = var.target_instance_id
-  port             = 3000              # Port of the application running in EC2
+  port             = 3000 # Port of the application running in EC2
 }
 
 # ALB Listener
 resource "aws_lb_listener" "http_listener" {
   load_balancer_arn = aws_lb.application_lb.arn
-  port              = 80                # ALB listens on port 80
+  port              = 80 # ALB listens on port 80
   protocol          = "HTTP"
 
   default_action {

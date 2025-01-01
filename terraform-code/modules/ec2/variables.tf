@@ -1,5 +1,5 @@
 variable "ec2_instance_profile" {
-   description = "instance profile"
+  description = "instance profile"
 }
 
 variable "default_vpc_id" {
@@ -23,4 +23,4 @@ variable "s3_bkt_name" {
 }
 
 #   ami             = "ami-053b12d3152c0cc71"
-  # instance_type   = "t2.micro"
+# instance_type   = "t2.micro"

@@ -30,5 +30,5 @@ resource "aws_iam_instance_profile" "ec2_instance_profile" {
 
 output "ec2_instance_profile" {
   description = "instance profie"
-  value = aws_iam_instance_profile.ec2_instance_profile.name
+  value       = aws_iam_instance_profile.ec2_instance_profile.name
 }

@@ -31,11 +31,11 @@ resource "aws_security_group" "expose-port" {
 }
 
 resource "aws_instance" "application" {
-  ami             = var.ami_id
-  instance_type   = var.instance_type
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.expose-port.id]
-  key_name        = var.key_name
-  iam_instance_profile = var.ec2_instance_profile
+  key_name               = var.key_name
+  iam_instance_profile   = var.ec2_instance_profile
 
   user_data = <<EOF
 #!/bin/bash
