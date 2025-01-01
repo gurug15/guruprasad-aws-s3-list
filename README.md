@@ -95,8 +95,7 @@ This project implements a two-part solution to demonstrate skills in application
 ---
 
 ## Assumptions
-- The S3 bucket and structure are pre-created and accessible.
-- API requests to the HTTP service use valid AWS credentials.
+- The S3 bucket and structure are pre-created.
 
 ---
 
